@@ -94,9 +94,19 @@ nav ul img:not(#search){
     background-position: top;
 } 
 .jumbotron img{
-    width:45%;
+    width:50%;
 }
 /* ./jumbotron */
+
+section.takes_two{
+    background-image: url('../img/it-takes-two-hero-banner-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+} 
+section.takes_two img{
+    width:50%;
+}
 /* #endregion main */
 
 
