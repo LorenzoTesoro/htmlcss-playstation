@@ -2,11 +2,15 @@
 
 :root{
     --clr-primary:#2D64E6;
-    --clr-smoke-shade:#727272;
+    --clr-smoke-dark:#1F1F1F;
+    --clr-smoke-light:#727272;
     --clr-dark-shade:#1E1E1E;
     --clr-dark:#040404;
     --clr-light:white;
     --clr-buy:#CD3D0F;
+
+    --fs-xxs:0.5rem;
+    --fs-sm:1rem;
 }
 
 body{
@@ -16,9 +20,11 @@ body{
 img{
     max-width: 100%;
 }
-
 p{
     color:var(--clr-smoke-shade);
+}
+h4{
+    font-size: var(--fs-sm);
 }
 /* #endregion common rules */
 
@@ -106,6 +112,13 @@ section.takes_two{
 } 
 section.takes_two img{
     width:50%;
+}
+/* /.takes_two */
+section.new_releases{
+    background-color: var(--clr-smoke-dark);
+}
+.new_releases .caption span{
+    font-size: var(--fs-xxs);
 }
 /* #endregion main */
 
