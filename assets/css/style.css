@@ -1,0 +1,61 @@
+/* #region common rules */
+
+:root{
+    --clr-primary:#2D64E6;
+    --clr-smoke-shade:#8E8E8E;
+    --clr-shadow:#1E1E1E;
+    --clr-dark:#040404;
+    --clr-darker:black;
+    --clr-light:white;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+/* #endregion common rules */
+
+
+
+
+
+/* #region debug */
+
+.debug header{
+    height:200px;
+    background-color: aqua;
+}
+
+.debug [class^="col-"]{
+    border:1px solid black;
+    height:50px;
+    background-color: blue;
+}
+
+.debug [class^="col"]{
+    border:1px solid black;
+    height:50px;
+    background-color: blue;
+}
+
+
+.debug section{
+    height:350px;
+    background-color: green;
+    border:1px solid black;
+}
+
+.debug .playstation_5 .col{
+    border:1px solid black;
+    height:50px;
+    background-color: blue;
+}
+
+.debug footer{
+    height:100px;
+    background-color: black;
+}
+/* #endregion debug */
