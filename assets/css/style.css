@@ -3,9 +3,8 @@
 :root{
     --clr-primary:#2D64E6;
     --clr-smoke-shade:#8E8E8E;
-    --clr-shadow:#1E1E1E;
+    --clr-dark-shade:#1E1E1E;
     --clr-dark:#040404;
-    --clr-darker:black;
     --clr-light:white;
 }
 
@@ -18,12 +17,19 @@ img{
 }
 /* #endregion common rules */
 
+/* #region utilities */
+.bg_dark{
+    background-color: var(--clr-dark);
+}
+.text_dark{
+    color:var(--clr-dark-shade);
+}
+/* #endregion utilities */
 
 
 
 
 /* #region debug */
-
 .debug header{
     height:200px;
     background-color: aqua;
@@ -59,3 +65,15 @@ img{
     background-color: black;
 }
 /* #endregion debug */
+
+/* #region header */
+header .logo{
+    width:50px;
+}
+nav ul img:not(#search){
+    width:10px;
+}
+#search{
+    width:20px;
+}
+/* #endregion header */
