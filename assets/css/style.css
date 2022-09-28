@@ -6,6 +6,7 @@
     --clr-dark-shade:#1E1E1E;
     --clr-dark:#040404;
     --clr-light:white;
+    --clr-buy:#CD3D0F;
 }
 
 body{
@@ -23,6 +24,9 @@ img{
 }
 .text_dark{
     color:var(--clr-dark-shade);
+}
+.buy{
+    background-color: var(--clr-buy);
 }
 /* #endregion utilities */
 
@@ -77,3 +81,13 @@ nav ul img:not(#search){
     width:20px;
 }
 /* #endregion header */
+
+/* #region main */
+.jumbotron{
+    background-image: url('../img/jumbo-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+} 
+/* #endregion main */
