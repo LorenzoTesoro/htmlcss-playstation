@@ -22,11 +22,18 @@ body{
 img{
     max-width: 100%;
 }
+
 p{
     color:var(--clr-smoke-light);
 }
 h4{
     font-size: var(--fs-sm);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
 }
 /* #endregion common rules */
 
@@ -153,11 +160,32 @@ section.playstation_now{
     padding-top:3rem;
     padding-bottom:3rem;
 }
+/* /.playstation_now */
 /* #endregion main */
 
+/* #region footer */
+footer{
+    background-color: #00439C;
+}
+#footer_logo{
+    width:100px;
+}
+#globe{
+    width:15px;
+    margin-right: 0.5rem;
+}
+.footer_link{
+    padding-top:3rem;
+}
+#logo_sie{
+    width:80px;
+}
+/* #endregion footer */
 
 
-/* responsive */
+
+
+/* #region responsive */
 
 @media  screen and (min-width: 576px) {
     .container_fixed{
@@ -165,7 +193,10 @@ section.playstation_now{
     }
     
 }
+
+
 @media screen and (min-width:768px){
+
     section.playstation_five .row.g-1{
         align-items: center;
     }
@@ -189,8 +220,12 @@ section.playstation_now{
         padding-top:1rem;
         padding-bottom:1rem;
     }
-    section.social_media img{
-        
+    .footer_link{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_link ul:last-of-type{
+        padding-right:4rem;
     }
 }
 
@@ -207,6 +242,9 @@ section.playstation_now{
     }
     #monthly_games{
         display: block;
+    }
+    .footer_link{
+        padding-top:0;
     }
 }
 
