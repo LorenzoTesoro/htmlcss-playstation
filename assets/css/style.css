@@ -1,39 +1,58 @@
 /* #region common rules */
 
 :root{
-    --clr-primary:#2D64E6;
+    --clr-primary:#0072CE;
     --clr-primary-dark:#161C3B;
-    --clr-smoke-dark:#1F1F1F;
     --clr-smoke-light:#BEBCBB;
+    --clr-smoke-dark:#727272;
     --clr-bg-smoke:#D9DADC;
-    --clr-dark-shade:#1E1E1E;
+    --clr-dark-shade:#1F1F1F;
     --clr-dark:#040404;
-    --clr-light:white;
+    --clr-white:#ffffff;
     --clr-buy:#CD3D0F;
 
     --fs-xxs:0.5rem;
-    --fs-sm:1rem;
+    --fs-xs:0.9rem;
+    --fs-sm:1.3rem;
+    --fs-md:1.5rem;
+    --fs-lg:1.625rem;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-img{
-    max-width: 100%;
+p{
+    color:var(--clr-smoke-dark);
 }
 
-p{
-    color:var(--clr-smoke-light);
-}
-h4{
-    font-size: var(--fs-sm);
+img{
+    max-width: 100%;
 }
 a{
     text-decoration: none;
 }
 ul{
     list-style: none;
+}
+
+.jumbotron a, .playstation_five a, .takes_two a, .playstation_four a, .playstation_plus a,  .playstation_now a, p, ul, footer ul a, footer span{
+    font-size: var(--fs-xs);
+}
+h1{
+    font-size:var(--fs-lg);
+}
+h2{
+    font-size:var(--fs-md);
+}
+h3{
+    font-size: var(--fs-sm);
+}
+h4{
+    font-size: var(--fs-xs);
+}
+.caption span{
+    font-size: var(--fs-xxs);
 }
 /* #endregion common rules */
 
@@ -42,7 +61,7 @@ ul{
     background-color: var(--clr-dark);
 }
 .text_dark{
-    color:var(--clr-dark-shade);
+    color:var(--clr-dark);
 }
 .buy{
     background-color: var(--clr-buy);
@@ -55,49 +74,25 @@ ul{
     padding-right:0.75rem;
     padding-left:0.75rem;
 }
-
+.my_2{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+}
 /* #endregion utilities */
 
-/* #region debug */
-.debug header{
-    height:200px;
-    background-color: aqua;
-}
-
-.debug [class^="col-"]{
-    border:1px solid black;
-    height:50px;
-    background-color: blue;
-}
-
-.debug [class^="col"]{
-    border:1px solid black;
-    height:50px;
-    background-color: blue;
-}
-
-
-.debug section{
-    height:350px;
-    background-color: green;
-    border:1px solid black;
-}
-
-.debug .playstation_5 .col{
-    border:1px solid black;
-    height:50px;
-    background-color: blue;
-}
-
-.debug footer{
-    height:100px;
-    background-color: black;
-}
-/* #endregion debug */
-
 /* #region header */
+header{
+    position:fixed;
+    left:0;
+    width:100%;
+    z-index: 100;
+    box-shadow: 0px 2px 5px -5px; 
+}
 header .logo{
     width:50px;
+}
+header .container-fluid:last-of-type{
+    background-color: var(--clr-white);
 }
 nav ul img:not(#search){
     width:10px;
@@ -117,8 +112,26 @@ nav ul img:not(#search){
 .jumbotron img{
     width:50%;
 }
+
 /* ./jumbotron */
 
+.carousel img{
+    padding:0.2rem;
+    border:2px;
+}
+.carousel .col-6:first-of-type img{
+    border-style: solid;
+    border-color: var(--clr-primary);
+}
+/* ./carousel */
+
+.playstation_five .container .row .col:first-of-type{
+    border-bottom:2px solid var(--clr-primary);
+}
+.playstation_five .container .row .col:not(.col:first-of-type){
+    opacity:0.7;
+}
+/* /.playstation_five */
 section.takes_two{
     background-image: url('../img/it-takes-two-hero-banner-desktop.jpg');
     background-size: cover;
@@ -129,12 +142,11 @@ section.takes_two img{
     width:50%;
 }
 /* /.takes_two */
+
 section.new_releases{
-    background-color: var(--clr-smoke-dark);
+    background-color: var(--clr-dark-shade);
 }
-.new_releases .caption span{
-    font-size: var(--fs-xxs);
-}
+
 /* /.new_releases */
 
 section.playstation_plus{
@@ -182,9 +194,6 @@ footer{
 }
 /* #endregion footer */
 
-
-
-
 /* #region responsive */
 
 @media  screen and (min-width: 576px) {
@@ -193,7 +202,6 @@ footer{
     }
     
 }
-
 
 @media screen and (min-width:768px){
 
@@ -230,8 +238,8 @@ footer{
 }
 
 @media  screen and (min-width:992px) {
-    .jumbotron img{
-        width:35%;
+    header nav ul:last-child li:nth-last-child(2){
+        margin:0rem 0.5rem;
     }
     .playstation_plus .row div:first-child{
         padding-top:3rem;
@@ -248,9 +256,10 @@ footer{
     }
 }
 
-
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1200px){
     section.playstation_four .col-12:nth-of-type(2) .btn{
         margin-top:1.4rem;
     }
 }
+
+/* #endregion responsive */
