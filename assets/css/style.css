@@ -129,9 +129,17 @@ section.new_releases{
     section.playstation_five .row.g-1{
         align-items: center;
     }
+    section.playstation_four .row:nth-child(2) p{
+        padding-right:0.8rem;
+    }
 }
 @media  screen and (min-width:992px) {
     .jumbotron img{
         width:35%;
-    } 
-} 
+    }
+}
+@media screen and (min-width: 1400px){
+    section.playstation_four .row:nth-child(2) .btn{
+        margin-top:1.4rem;
+    }
+}
