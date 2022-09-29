@@ -43,6 +43,12 @@ h4{
 .d_none{
     display: none;
 }
+.container_fixed{
+    max-width: 540px;
+    padding-right:0.75rem;
+    padding-left:0.75rem;
+}
+
 /* #endregion utilities */
 
 /* #region debug */
@@ -152,6 +158,13 @@ section.playstation_now{
 
 
 /* responsive */
+
+@media  screen and (min-width: 576px) {
+    .container_fixed{
+        margin:0 auto;
+    }
+    
+}
 @media screen and (min-width:768px){
     section.playstation_five .row.g-1{
         align-items: center;
@@ -176,6 +189,9 @@ section.playstation_now{
         padding-top:1rem;
         padding-bottom:1rem;
     }
+    section.social_media img{
+        
+    }
 }
 
 @media  screen and (min-width:992px) {
@@ -193,6 +209,7 @@ section.playstation_now{
         display: block;
     }
 }
+
 
 @media screen and (min-width: 1400px){
     section.playstation_four .col-12:nth-of-type(2) .btn{
