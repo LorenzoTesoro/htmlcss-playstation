@@ -2,8 +2,9 @@
 
 :root{
     --clr-primary:#2D64E6;
+    --clr-primary-dark:#161C3B;
     --clr-smoke-dark:#1F1F1F;
-    --clr-smoke-light:#727272;
+    --clr-smoke-light:#BEBCBB;
     --clr-bg-smoke:#D9DADC;
     --clr-dark-shade:#1E1E1E;
     --clr-dark:#040404;
@@ -39,10 +40,10 @@ h4{
 .buy{
     background-color: var(--clr-buy);
 }
+.d_none{
+    display: none;
+}
 /* #endregion utilities */
-
-
-
 
 /* #region debug */
 .debug header{
@@ -126,9 +127,7 @@ section.new_releases{
 section.playstation_plus{
     background-color: var(--clr-smoke-light);
 }
-.playstation_plus .row div:last-child{
-    display: none;
-}
+
 .playstation_plus .row div:first-child{
     padding-top:3rem;
     padding-bottom:3rem;
@@ -138,6 +137,15 @@ section.playstation_plus{
 }
 .playstation_plus .btn{
     background-color: var(--clr-bg-smoke);
+}
+/* /.playstation_plus */
+
+section.playstation_now{
+    background-color: var(--clr-primary-dark);
+}
+.playstation_now .row div:first-child{
+    padding-top:3rem;
+    padding-bottom:3rem;
 }
 /* #endregion main */
 
@@ -158,8 +166,15 @@ section.playstation_plus{
     .playstation_plus .row div:last-child{
         display: block;
     }
-    #monthly_games{
-        height:100%;
+    #monthly_game{
+        height: 100%;
+    }
+    .playstation_now .row div:last-child{
+        display: block;
+    }
+    .playstation_now .row div:first-of-type{
+        padding-top:1rem;
+        padding-bottom:1rem;
     }
 }
 
@@ -167,9 +182,15 @@ section.playstation_plus{
     .jumbotron img{
         width:35%;
     }
-    .playstation_plus .row div:first-of-type{
+    .playstation_plus .row div:first-child{
         padding-top:3rem;
         padding-bottom:3rem;
+    }
+    .playstation_plus .row, .playstation_now .row{
+        align-items: center;
+    }
+    #monthly_games{
+        display: block;
     }
 }
 
