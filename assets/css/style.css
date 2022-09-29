@@ -4,6 +4,7 @@
     --clr-primary:#2D64E6;
     --clr-smoke-dark:#1F1F1F;
     --clr-smoke-light:#727272;
+    --clr-bg-smoke:#D9DADC;
     --clr-dark-shade:#1E1E1E;
     --clr-dark:#040404;
     --clr-light:white;
@@ -21,7 +22,7 @@ img{
     max-width: 100%;
 }
 p{
-    color:var(--clr-smoke-shade);
+    color:var(--clr-smoke-light);
 }
 h4{
     font-size: var(--fs-sm);
@@ -120,6 +121,24 @@ section.new_releases{
 .new_releases .caption span{
     font-size: var(--fs-xxs);
 }
+/* /.new_releases */
+
+section.playstation_plus{
+    background-color: var(--clr-smoke-light);
+}
+.playstation_plus .row div:last-child{
+    display: none;
+}
+.playstation_plus .row div:first-child{
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+#logo_plus{
+    width: 60%;
+}
+.playstation_plus .btn{
+    background-color: var(--clr-bg-smoke);
+}
 /* #endregion main */
 
 
@@ -129,17 +148,33 @@ section.new_releases{
     section.playstation_five .row.g-1{
         align-items: center;
     }
-    section.playstation_four .row:nth-child(2) p{
+    section.playstation_four .row .col-12:nth-of-type(2) p{
         padding-right:0.8rem;
     }
+    .playstation_plus .row div:first-of-type{
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    .playstation_plus .row div:last-child{
+        display: block;
+    }
+    #monthly_games{
+        height:100%;
+    }
 }
+
 @media  screen and (min-width:992px) {
     .jumbotron img{
         width:35%;
     }
+    .playstation_plus .row div:first-of-type{
+        padding-top:3rem;
+        padding-bottom:3rem;
+    }
 }
+
 @media screen and (min-width: 1400px){
-    section.playstation_four .row:nth-child(2) .btn{
+    section.playstation_four .col-12:nth-of-type(2) .btn{
         margin-top:1.4rem;
     }
 }
