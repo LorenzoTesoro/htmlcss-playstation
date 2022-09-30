@@ -110,7 +110,7 @@ main{
     background-image: url('../img/jumbo-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
 } 
 .jumbotron img{
     width:50%;
@@ -244,6 +244,9 @@ footer{
     header nav ul:last-child li:nth-last-child(2){
         margin:0rem 0.5rem;
     }
+    .jumbotron{
+        background-position: top;
+    } 
     .playstation_plus .row div:first-child{
         padding-top:3rem;
         padding-bottom:3rem;
