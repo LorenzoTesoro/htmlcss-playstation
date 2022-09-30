@@ -81,10 +81,10 @@ h4{
 /* #endregion utilities */
 
 /* #region header */
-header{
+header {
     position:fixed;
     left:0;
-    width:100%;
+    width: 100%;
     z-index: 100;
     box-shadow: 0px 2px 5px -5px; 
 }
@@ -103,6 +103,9 @@ nav ul img:not(#search){
 /* #endregion header */
 
 /* #region main */
+main{
+    padding-top:5.625rem;
+}
 .jumbotron{
     background-image: url('../img/jumbo-bg.png');
     background-size: cover;
@@ -263,3 +266,5 @@ footer{
 }
 
 /* #endregion responsive */
+
+
