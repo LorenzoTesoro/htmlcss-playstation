@@ -1,0 +1,288 @@
+/* #region common rules */
+
+:root{
+    --clr-primary:#0072CE;
+    --clr-primary-dark:#161C3B;
+    --clr-smoke-light:#BEBCBB;
+    --clr-smoke-dark:#727272;
+    --clr-bg-smoke:#D9DADC;
+    --clr-dark-shade:#1F1F1F;
+    --clr-dark:#040404;
+    --clr-white:#ffffff;
+    --clr-buy:#CD3D0F;
+
+    --fs-xxs:0.5rem;
+    --fs-xs:0.9rem;
+    --fs-sm:1.3rem;
+    --fs-md:1.5rem;
+    --fs-lg:1.625rem;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    color:var(--clr-smoke-dark);
+}
+
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.jumbotron a, .playstation_five a, .takes_two a, .playstation_four a, .playstation_plus a,  .playstation_now a, p, ul, footer ul a, footer span{
+    font-size: var(--fs-xs);
+}
+h1{
+    font-size:var(--fs-lg);
+}
+h2{
+    font-size:var(--fs-md);
+}
+h3{
+    font-size: var(--fs-sm);
+}
+h4{
+    font-size: var(--fs-xs);
+}
+.caption span, .box span{
+    font-size: var(--fs-xxs);
+}
+/* #endregion common rules */
+
+/* #region utilities */
+.bg_dark{
+    background-color: var(--clr-dark);
+}
+.text_dark{
+    color:var(--clr-dark);
+}
+.buy{
+    background-color: var(--clr-buy);
+}
+.d_none{
+    display: none;
+}
+.container_fixed{
+    max-width: 540px;
+    padding-right:0.75rem;
+    padding-left:0.75rem;
+}
+.my_2{
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+}
+/* #endregion utilities */
+
+/* #region header */
+header {
+    position:fixed;
+    left:0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 2px 5px -5px; 
+}
+header .logo{
+    width:50px;
+}
+header .container-fluid:last-of-type{
+    background-color: var(--clr-white);
+}
+nav ul img:not(#search){
+    width:10px;
+}
+#search{
+    width:20px;
+}
+
+/* #endregion header */
+
+/* #region main */
+main{
+    padding-top:5.625rem;
+}
+.jumbotron{
+    background-image: url('../img/jumbo-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+} 
+.jumbotron img{
+    width:50%;
+}
+
+/* ./jumbotron */
+
+.carousel img{
+    padding:0.2rem;
+    border:2px;
+    position:relative;
+    bottom:0;
+    transition: bottom ease 0.4s;
+}
+.carousel .col-6:first-of-type img{
+    border-style: solid;
+    border-color: var(--clr-primary);
+}
+.carousel .col-6:hover img{
+    bottom:0.875rem;
+}
+
+/* ./carousel */
+
+.playstation_five .container .row .col:first-of-type .box{
+    border-bottom:2px solid var(--clr-primary);
+}
+.playstation_five .container .row .col:not(.col:first-of-type){
+    opacity:0.7;
+}
+.playstation_five .container .row .col:not(.col:first-of-type):hover .box{
+    border-bottom:2px solid var(--clr-primary);
+    opacity: 1;
+}
+.playstation_five h4{
+    display: none;
+}
+/* /.playstation_five */
+section.takes_two{
+    background-image: url('../img/it-takes-two-hero-banner-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+} 
+section.takes_two img{
+    width:50%;
+}
+/* /.takes_two */
+
+section.new_releases{
+    background-color: var(--clr-dark-shade);
+}
+
+/* /.new_releases */
+
+section.playstation_plus{
+    background-color: var(--clr-smoke-light);
+}
+
+.playstation_plus .row div:first-child{
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+#logo_plus{
+    width: 60%;
+}
+.playstation_plus .btn{
+    background-color: var(--clr-bg-smoke);
+}
+/* /.playstation_plus */
+
+section.playstation_now{
+    background-color: var(--clr-primary-dark);
+}
+.playstation_now .row div:first-child{
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+/* /.playstation_now */
+/* #endregion main */
+
+/* #region footer */
+footer{
+    background-color: #00439C;
+}
+#footer_logo{
+    width:100px;
+}
+#globe{
+    width:15px;
+    margin-right: 0.5rem;
+}
+.footer_link{
+    padding-top:3rem;
+}
+#logo_sie{
+    width:80px;
+}
+/* #endregion footer */
+
+/* #region responsive */
+
+@media  screen and (min-width: 576px) {
+    .container_fixed{
+        margin:0 auto;
+    }
+    
+}
+
+@media screen and (min-width:768px){
+
+    section.playstation_five .row.g-1{
+        align-items: center;
+    }
+    section.playstation_five h4{
+        display: block;
+    }
+    section.playstation_four .row .col-12:nth-of-type(2) p{
+        padding-right:0.8rem;
+    }
+    .playstation_plus .row div:first-of-type{
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    .playstation_plus .row div:last-child{
+        display: block;
+    }
+    #monthly_game{
+        height: 100%;
+    }
+    .playstation_now .row div:last-child{
+        display: block;
+    }
+    .playstation_now .row div:first-of-type{
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+    .footer_link{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_link ul:last-of-type{
+        padding-right:4rem;
+    }
+}
+
+@media  screen and (min-width:992px) {
+    header nav ul:last-child li:nth-last-child(2){
+        margin:0rem 0.5rem;
+    }
+    .playstation_plus .row div:first-child{
+        padding-top:3rem;
+        padding-bottom:3rem;
+    }
+    .playstation_plus .row, .playstation_now .row{
+        align-items: center;
+    }
+    #monthly_games{
+        display: block;
+    }
+    .footer_link{
+        padding-top:0;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    section.playstation_four .col-12:nth-of-type(2) .btn{
+        margin-top:1.4rem;
+    }
+}
+
+/* #endregion responsive */
+
+
